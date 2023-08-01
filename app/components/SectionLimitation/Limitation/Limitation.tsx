@@ -14,7 +14,7 @@ export const Limitation: React.FunctionComponent<Props> = props => {
         <div className={`${styles.limitation} ${styles[position]}`}>
             <div className={styles.limitation_wrap}>
                 {icon}
-                <h4>{header}</h4>
+                <h3>{header}</h3>
             </div>
 
             <p>{paragraph}</p>

@@ -30,15 +30,15 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [Solution URL](https://your-solution-url.com)
--   Live Site URL: [Live site URL ](https://your-live-site-url.com)
+-   Solution URL: [Solution URL](https://github.com/Andro87/bmi-calculator.git)
+-   Live Site URL: [Live site URL ](https://bmi-calculator-six-brown.vercel.app/)
 
 ## My process
 
 ### Built with
 
 -   Semantic HTML5 markup
--   SASS / SCSS custom properties
+-   SASS / SCSS
 -   Flexbox
 -   CSS Grid
 -   Mobile-first workflow
