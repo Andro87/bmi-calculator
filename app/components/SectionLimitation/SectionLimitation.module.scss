@@ -1,0 +1,51 @@
+@use "styles/helpers" as *;
+
+.section_limitations {
+    margin-bottom: 96px;
+    @include breakpoint($large) {
+        margin-bottom: 120px;
+    }
+}
+
+.limitations_container {
+    @include container;
+    position: relative;
+    @include breakpoint($large) {
+        background-image: url("/images/pattern-curved-line-right.svg");
+        background-repeat: no-repeat;
+        background-position: 6rem 15rem;
+    }
+}
+.limitations_intro {
+    text-align: center;
+    @include breakpoint($large) {
+        max-width: 32.25rem;
+        text-align: initial;
+        position: absolute;
+    }
+    h2 {
+        margin-top: 0;
+    }
+}
+
+.limitations {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: " gender" "age" "muscle" "pregnancy" "race";
+    gap: 16px;
+    @include breakpoint($medium) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: " gender age" "muscle pregnancy" " race .";
+    }
+    @include breakpoint($large) {
+        margin-left: auto;
+        width: 75%;
+
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: ". gender" "age muscle" "pregnancy race";
+
+        row-gap: 24px;
+        column-gap: 32px;
+    }
+}

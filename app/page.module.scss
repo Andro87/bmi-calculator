@@ -1,0 +1,25 @@
+@use "styles/helpers" as *;
+
+.home_container {
+    position: relative;
+
+    &:before {
+        content: "";
+        background: linear-gradient(
+            315deg,
+            var(--light-azure) 0%,
+            var(--azure) 100%
+        );
+
+        border-radius: 0rem 0rem 2.1875rem 2.1875rem;
+        position: absolute;
+        width: 100%;
+        height: 42rem;
+        z-index: -1;
+        @include breakpoint($large) {
+            margin-left: 24px;
+            width: 65%;
+            height: 46rem;
+        }
+    }
+}

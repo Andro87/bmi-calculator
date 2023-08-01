@@ -1,0 +1,158 @@
+@use "styles/helpers" as *;
+
+.form {
+    border-radius: 1rem;
+    background: var(--pure-white);
+    box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
+    padding: 24px;
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
+    h2 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        letter-spacing: -0.075rem;
+        margin-bottom: 0;
+    }
+
+    @include breakpoint($medium) {
+        margin-top: 40px;
+        gap: 32px;
+        padding: 32px;
+    }
+    @include breakpoint($large) {
+        margin-top: 0;
+        max-width: 35.25rem;
+    }
+}
+
+.form_units {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.unit_container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    label {
+        color: var(--gunmetal);
+        font-size: 1rem;
+        font-weight: 600;
+        line-height: 150%;
+    }
+    input {
+        appearance: none;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: 1px solid var(--borders);
+        cursor: pointer;
+        @include transition;
+        &:hover {
+            border: 1px solid var(--blue);
+        }
+        &:checked {
+            position: relative;
+            background-color: var(--borders);
+            &::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                margin: auto;
+                width: 16px;
+                height: 16px;
+                border-radius: 50%;
+                background-color: var(--blue);
+            }
+        }
+    }
+}
+
+.values_container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    @include breakpoint($medium) {
+        gap: 24px;
+        flex-direction: row;
+    }
+
+    &_imperial {
+        @include breakpoint($medium) {
+            flex-direction: column;
+        }
+    }
+}
+
+.values_wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.form_result {
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    background-color: var(--blue);
+    padding: 32px;
+    color: var(--pure-white);
+    @include breakpoint($medium) {
+        border-top-right-radius: 62.5rem;
+        border-bottom-right-radius: 62.5rem;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.result_intro {
+    p {
+        margin: 0;
+
+        font-size: 1rem;
+        font-weight: 600;
+        line-height: 150%;
+    }
+    span {
+        font-size: 3rem;
+        font-weight: 600;
+        line-height: 110%;
+        margin-bottom: 24px;
+        margin-top: 8px;
+        display: block;
+        @include breakpoint($medium) {
+            margin-bottom: initial;
+        }
+    }
+}
+.result_container {
+    p {
+        font-size: 0.875rem;
+        font-weight: 400;
+        line-height: 150%;
+        @include breakpoint($medium) {
+            max-width: 16.5rem;
+        }
+        span {
+            font-weight: 700;
+        }
+    }
+}
+
+.result_initial {
+    color: var(--pure-white);
+    span {
+        font-size: 1.5rem;
+        font-weight: 600;
+        letter-spacing: -0.075rem;
+    }
+    p {
+        font-size: 0.875rem;
+        font-weight: 400;
+        line-height: 150%;
+    }
+}

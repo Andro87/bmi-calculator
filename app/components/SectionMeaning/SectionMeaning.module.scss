@@ -1,0 +1,95 @@
+@use "styles/helpers" as *;
+
+.section_meaning {
+    margin-block: 72px;
+    @include breakpoint($medium) {
+        margin-block: 96px;
+    }
+    @include breakpoint($large) {
+        margin-top: 160px;
+        margin-bottom: 120px;
+    }
+}
+
+.meaning_intro {
+    position: relative;
+}
+
+.meaning_intro_container {
+    @include breakpoint($medium) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        @include container;
+    }
+}
+
+.meaning_img_container {
+    display: flex;
+
+    @include breakpoint($medium) {
+        position: relative;
+        left: -16%;
+    }
+    @include breakpoint($large) {
+        position: initial;
+        left: initial;
+    }
+    img {
+        max-width: 100%;
+    }
+}
+
+.meaning_info_container {
+    width: 90%;
+    margin: auto;
+    @include breakpoint($medium) {
+        width: initial;
+        max-width: 20rem;
+        margin: initial;
+        margin-left: auto;
+        align-self: center;
+    }
+    @include breakpoint($large) {
+        width: 90%;
+        max-width: 30rem;
+        position: relative;
+        &:before {
+            content: url("/images/pattern-curved-line-left.svg");
+            position: absolute;
+            top: -200px;
+            right: 0;
+        }
+    }
+}
+
+.meaning_suggestions {
+    padding-block: 56px;
+    margin-top: 72px;
+
+    background: linear-gradient(
+        315deg,
+        rgba(214, 230, 254, 0.25) 0%,
+        rgba(214, 252, 254, 0.25) 100%
+    );
+
+    @include breakpoint($medium) {
+        margin-top: 96px;
+    }
+    @include breakpoint($large) {
+        width: 95%;
+        padding-block: 72px;
+        margin-inline: auto;
+        border-radius: 32px;
+    }
+}
+.suggestions_container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    @include container;
+    @include breakpoint($large) {
+        flex-direction: row;
+        gap: 32px;
+    }
+}

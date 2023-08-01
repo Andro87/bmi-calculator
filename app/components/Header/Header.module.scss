@@ -1,0 +1,12 @@
+@use "styles/helpers" as *;
+
+.header {
+    text-align: center;
+    padding-top: 32px;
+    @include container;
+    @include breakpoint($large) {
+        text-align: initial;
+        padding-top: 64px;
+        padding-bottom: 32px;
+    }
+}

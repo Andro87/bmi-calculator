@@ -1,0 +1,20 @@
+@use "styles/helpers" as *;
+
+.container {
+    @include breakpoint($medium) {
+        display: flex;
+        gap: 40px;
+    }
+    @include breakpoint($large) {
+        flex-direction: column;
+        gap: 45px;
+    }
+}
+
+.wrap {
+    h3 {
+        @include breakpoint($medium) {
+            margin-block: 0;
+        }
+    }
+}

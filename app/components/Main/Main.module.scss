@@ -1,0 +1,18 @@
+@use "styles/helpers" as *;
+
+.main_container {
+    @include container;
+    @include breakpoint($large) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.main_intro {
+    text-align: center;
+    @include breakpoint($large) {
+        text-align: initial;
+        max-width: 29rem;
+        margin-block: auto;
+    }
+}

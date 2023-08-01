@@ -1,0 +1,54 @@
+@use "styles/helpers" as *;
+
+.limitation {
+    box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
+    background-color: var(--pure-white);
+    border-radius: 16px;
+    padding: 24px;
+
+    &_wrap {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+}
+
+.gender {
+    grid-area: gender;
+    @include breakpoint($large) {
+        margin-right: 40px;
+        margin-left: -40px;
+    }
+}
+.age {
+    grid-area: age;
+    @include breakpoint($large) {
+        margin-left: auto;
+    }
+}
+
+.muscle {
+    grid-area: muscle;
+    @include breakpoint($large) {
+        margin-left: auto;
+    }
+}
+
+.pregnancy {
+    grid-area: pregnancy;
+    @include breakpoint($large) {
+        margin-right: 120px;
+        margin-left: -120px;
+    }
+}
+.race {
+    grid-area: race;
+    @include breakpoint($medium) {
+        margin-right: -50%;
+        margin-left: 50%;
+    }
+    @include breakpoint($large) {
+        margin-right: 120px;
+        margin-left: -120px;
+    }
+}
